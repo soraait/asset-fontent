@@ -1,0 +1,44 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+      <mat-card-title>Delete for the clicked goods</mat-card-title>
+      <mat-card-content>
+        <div fxLayout="column wrap" fxLayoutGap="40px">
+          <div fxLayout="row wrap" fxFlex>
+            <div fxFlex><strong>GoodsID:</strong></div>
+            <div fxFlex>{{good?.goodsID}}</div>
+          </div>
+
+          <div fxLayout="row wrap" fxFlex>
+            <div fxFlex><strong>GoodsName:</strong></div>
+            <div fxFlex>{{good?.goodsName}}</div>
+          </div>
+
+          <div fxLayout="row wrap" fxFlex>
+            <div fxFlex><strong>GoodsNo:</strong></div>
+            <div fxFlex>{{good?.goodsNo}}</div>
+          </div>
+
+          <div fxLayout="row wrap" fxFlex>
+            <div fxFlex><strong>GoodsBrand:</strong></div>
+            <div fxFlex>{{good?.goodsBrand}}</div>
+          </div>
+
+          <div fxLayout="row wrap" fxFlex>
+            <div fxFlex><strong>GoodsModel:</strong></div>
+            <div fxFlex>{{good?.goodsModel}}</div>
+          </div>
+
+          <div fxLayout="row wrap" fxFlex>
+            <div fxFlex><strong>GoodsSerailNumber:</strong></div>
+            <div fxFlex>{{good?.goodsSerailNumber}}</div>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <mat-card-actions align="start">
+          <button mat-raised-button color="primary" (click)="deleteGoods()">Delete</button>
+          <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+      </mat-card-actions>
+    </mat-card>
+</section>

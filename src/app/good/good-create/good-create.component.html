@@ -1,0 +1,53 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="500px" fxFlex.xs="100%">
+      <mat-card-title>Create a new Goods</mat-card-title>
+      <form [formGroup]="goodForm" autocomplete="off" novalidate (ngSubmit)="createGoods(goodForm.value)" fxLayout="column wrap"
+      fxLayoutAlign="center center" fxLayoutGap="10px">
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Goods's Name" formControlName="goodsName" id="goodsName">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('goodsName', 'required')">goodsName is required</mat-error>
+          <mat-error *ngIf="hasError('goodsName', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="text" placeholder="Goods's No" formControlName="goodsNo" id="goodsNo">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('goodsNo', 'required')">goodsNo is required</mat-error>
+          <mat-error *ngIf="hasError('goodsNo', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="text" placeholder="Goods's Brand" formControlName="goodsBrand" id="goodsBrand">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('goodsBrand', 'required')">goodsBrand is required</mat-error>
+          <mat-error *ngIf="hasError('goodsBrand', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="text" placeholder="Goods's Model" formControlName="goodsModel" id="goodsModel">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('goodsModel', 'required')">goodsModel is required</mat-error>
+          <mat-error *ngIf="hasError('goodsModel', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="text" placeholder="Goods's SerailNumber" formControlName="goodsSerailNumber" id="goodsSerailNumber">
+          <mat-hint align="end">Not more then 60 characters long.</mat-hint>
+          <mat-error *ngIf="hasError('goodsSerailNumber', 'required')">goodsSerailNumber is required</mat-error>
+          <mat-error *ngIf="hasError('goodsSerailNumber', 'maxlength')">You have more than 60 characters</mat-error>
+        </mat-form-field>
+
+      </mat-card-content>
+
+      <mat-card-actions>
+        <mat-card-actions align="start">
+          <button mat-raised-button color="primary" [disabled]="!goodForm.valid">Create</button>
+          <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+      </mat-card-actions>
+
+    </form>
+    </mat-card>
+</section>
